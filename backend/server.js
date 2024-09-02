@@ -20,12 +20,14 @@ app.use(cors()); // Enable CORS
 // Login API Route
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
+  console.log('Received login request:', email);
 
   try {
     const result = await pool.query(
       'SELECT * FROM Login WHERE email = $1 AND password = $2',
       [email, password]
     );
+    console.log('Login result:', result.rows);
 
     if (result.rows.length > 0) {
       res.status(200).json({ message: 'Login successful' });
@@ -33,6 +35,7 @@ app.post('/api/login', async (req, res) => {
       res.status(401).json({ error: 'Invalid email or password' });
     }
   } catch (error) {
+    console.error('Database query error:', error.message);
     res.status(500).json({ error: error.message });
   }
 });

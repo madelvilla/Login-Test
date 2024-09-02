@@ -1,57 +1,101 @@
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 5% auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
 .login-form {
+    flex: 1;
     max-width: 400px;
-    margin: auto;
-    padding: 1rem; 
+    margin-right: 2rem;
+    padding: 2rem;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box; 
-  }
-  
-  .form-group {
+    box-sizing: border-box;
+}
+
+.login-help {
+    flex: 1;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.Login-header {
+    text-align: center;
     margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
     text-align: left;
-  }
-  
-  .form-group label {
+}
+
+.admin-login {
+    margin-top: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.form-group label {
     display: block;
     margin-bottom: 0.5rem;
-  }
-  
-  .form-group input {
-    width: calc(100% - 1rem); 
+}
+
+.form-group input {
+    width: calc(100% - 1rem);
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; 
-  }
-  
-  .error {
+    box-sizing: border-box;
+}
+
+.error {
     color: red;
     font-size: 0.875rem;
-  }
-  
-  button {
-    width: 100%; 
+}
+
+.login-button {
+    width: 100%;
     padding: 0.75rem;
+    margin-top: 2rem;
     border: none;
     border-radius: 4px;
     background-color: #98B66E;
     color: white;
+    font-size: larger;
     cursor: pointer;
-    box-sizing: border-box; 
-  }
-  
-  button:hover {
-    background-color: #C4DCA4;
-  }
-  
-  .forgot-password-link {
+    box-sizing: border-box;
+}
+
+.login-button:hover {
+    background-color: #79994d;
+}
+
+.forgot-password-link {
     display: block;
     margin-top: 1rem;
-    color: #C4DCA4;
+    color: #87aa55;
     text-decoration: none;
-  }
-  
-  .forgot-password-link:hover {
+}
+
+.forgot-password-link:hover {
     text-decoration: underline;
-  }
+}
+
+.login-help h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.login-help p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
